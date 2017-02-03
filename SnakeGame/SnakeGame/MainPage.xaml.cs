@@ -41,14 +41,14 @@ namespace SnakeGame
     public sealed partial class MainPage : Page
     {
         Random rnd = new Random();
-        int playerXaxis = 240, playerYaxis = 240;
+        int playerXaxis = 140, playerYaxis = 140;
         public bool[] keys = new bool[] { false, false, false, false, false };
         public const int up = 0, down = 1, left = 2, right = 3, space = 4;
         public const int intro = 0, mainMenu = 1, about = 2, snake = 3, gameOver = 4;
-        int[] arrayX = new int[2000];
-        int[] arrayY = new int[2000];
-        int[] arrayXTemp = new int[2000];
-        int[] arrayYTemp = new int[2000];
+        int[] arrayX = new int[2500];
+        int[] arrayY = new int[2500];
+        int[] arrayXTemp = new int[2500];
+        int[] arrayYTemp = new int[2500];
         public static ICollection<string> lines = new SortedSet<string>();
         public static ICollection<int> lines2 = new SortedSet<int>();
         public static ICollection<int> lines3 = new SortedSet<int>();
@@ -61,7 +61,7 @@ namespace SnakeGame
         byte intro_color = 100;
         int menu_selector = 0;
 
-        static TimeSpan TargetElapsedTime = TimeSpan.FromSeconds(1.0 / 20.0);
+        static TimeSpan TargetElapsedTime = TimeSpan.FromSeconds(1.0 / 16.0);
 
         public MainPage()
         {
