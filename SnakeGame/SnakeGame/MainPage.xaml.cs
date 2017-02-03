@@ -41,7 +41,7 @@ namespace SnakeGame
     public sealed partial class MainPage : Page
     {
         Random rnd = new Random();
-        int playerXaxis = 250, playerYaxis = 250;
+        int playerXaxis = 240, playerYaxis = 240;
         public bool[] keys = new bool[] { false, false, false, false, false };
         public const int up = 0, down = 1, left = 2, right = 3, space = 4;
         public const int intro = 0, mainMenu = 1, about = 2, snake = 3, gameOver = 4;
@@ -198,8 +198,7 @@ namespace SnakeGame
                     args.DrawingSession.FillRectangle(0, 0, 600, 600, Color.FromArgb(255, 0, 0, 0));
                     args.DrawingSession.DrawText("Game Over", 240, 240, Colors.Red);
 
-                    var scoresFilePath = Path.Combine(installedLocation.Path, "scores.txt");
-                    //var scoresFilePath = Path.Combine(installedLocation.Path, "scores.text");
+                    var scoresFilePath = Path.Combine(installedLocation.Path, "scores.text");
                     // score
                     string foodAmountString = (foodAmount + 1).ToString();
                     if (System.IO.File.ReadAllLines(scoresFilePath) != null)
@@ -307,8 +306,8 @@ namespace SnakeGame
             if (food == false)
             {
                 food = true;
-                foodX = rnd.Next(210, 390);
-                foodY = rnd.Next(210, 390);
+                foodX = rnd.Next(206, 394);
+                foodY = rnd.Next(206, 394);
             }
 
             // Snake Body Array
